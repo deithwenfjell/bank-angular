@@ -1,0 +1,26 @@
+<!-- <nav class="mat-app-background">
+  <a routerLink="/profil-list" >Profily</a>
+  <a routerLink="/ucty" >Účty</a>
+</nav> -->
+
+<mat-toolbar class="navbar" >
+  <span>MegaBanka</span>
+  <span>
+    <button mat-button 
+    [matMenuTriggerFor]="appMenu">
+    Menu
+    <mat-icon>more_vert</mat-icon>
+
+    </button>
+  </span>
+</mat-toolbar>
+
+<mat-menu #appMenu="matMenu">
+  <button mat-menu-item routerLink="/profil-list">Profily</button>
+  <button mat-menu-item routerLink="/ucty">Účty</button>
+</mat-menu>
+
+<router-outlet></router-outlet>
+  <!-- <a routerLink="" >Detail pohybu na účte</a>
+  <a routerLink="" >Report</a>
+  <a routerLink="" >Posielanie peňazí</a> -->
